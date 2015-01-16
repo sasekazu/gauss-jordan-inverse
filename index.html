@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Gauss-Jordan</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/numeric-1.2.6.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div id="page">
+		<div style="width: 400px;">
+			<p>Matrix size: <span id="matSizeSpan"></span></p>
+			<div id="matSizeSlider" style="width: 300px;"></div>
+		</div>
+		<div>
+			<p>
+			左：入力行列 A をGauss-Jordan法の手続きで基本変形した行列 M * A<br />
+			真ん中：単位行列 E に A と同じ基本変形を適用した行列 M * E<br />
+			右：A * (M*E)．最終的に A * A^{-1} = E となる．（計算結果の確認用）
+			</p>
+		</div>
+		<div>
+			<canvas id="Canvas-U" width="1000" height="600" style="border: solid 1px;"></canvas>
+			<canvas id="Canvas-Ainv" width="1000" height="600" style="border: solid 1px;"></canvas>
+			<canvas id="Canvas-AAinv" width="1000" height="600" style="border: solid 1px;"></canvas>
+		</div>
+		<div>
+			<h4>ソースコード</h4>
+			<ul>
+				<li><a href="https://github.com/sasekazu/gauss-jordan-inverse">GitHub</a></li>
+				<li><a href="https://gist.github.com/sasekazu/5c7bc0d4bb8d8e0f7c92">Gist</a>　Gauss-Jordan法による逆行列計算の例（実際にはNumericJavascriptなどの線形代数ライブラリを使った方が良い）</li>
+			</ul>
+		</div>
+	</div>
+	<footer style="text-align: center;">
+		<a href="http://www.sasekazu.info">sasekazu.info</a>
+	</footer>
+</body>
+</html>
